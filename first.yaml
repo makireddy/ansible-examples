@@ -1,7 +1,7 @@
 ---
 # Target
-hosts: centos01
-user: root
+- hosts: centos01
+  user: root
 
 
 # Tasks
