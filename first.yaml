@@ -3,7 +3,7 @@
 - hosts: centos
   become: true
 # Tasks
-- tasks:
+  tasks:
    - name: configure MOTD
      copy:
        src: centos_motd
