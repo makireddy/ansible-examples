@@ -1,6 +1,6 @@
 ---
 # Target
-- hosts: centos01
+- hosts: ubutu01
   become: true
 # Tasks
   tasks:
