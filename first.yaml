@@ -1,6 +1,6 @@
 ---
 # Target
-- hosts: ubutu01
+- hosts: linux
   become: true
 # Tasks
   tasks:
