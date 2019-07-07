@@ -1,6 +1,6 @@
 ---
 # Target
-- hosts: centos01
+- hosts: centos
   become: true
 # Tasks
 - tasks:
