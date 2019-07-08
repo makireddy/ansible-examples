@@ -7,7 +7,7 @@
   tasks:
    - name: configure MOTD
      copy:
-       src: centos_motd
+       content: This is for Copy Module with content
        dest: /etc/motd
    
 
