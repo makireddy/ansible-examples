@@ -3,7 +3,7 @@
 - hosts: centos01
   become: true
   gather_facts: false
-  vars
+  vars:
     motd_vars: This is for Copy Module with content using vars
 # Tasks
   tasks:
