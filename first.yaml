@@ -4,7 +4,7 @@
   become: true
   gather_facts: false
   vars:
-    motd_vars: This is for Copy Module with content changed
+    motd_vars: This is for handler testing
 # Tasks
   tasks:
    - name: configure MOTD
