@@ -2,6 +2,7 @@
 # Target
 - hosts: linux
   become: true
+  gather_facts: false
 # Tasks
   tasks:
    - name: configure MOTD
