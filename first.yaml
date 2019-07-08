@@ -9,7 +9,7 @@
   tasks:
    - name: configure MOTD
      copy:
-       content: {{ motd_vars }}
+       content: "{{ motd_vars }}"
        dest: /etc/motd
    
 
