@@ -11,7 +11,7 @@
      copy:
        content: "{{ motd_vars }}"
        dest: /etc/motd
-     notify: MoTD Notification
+     notify: MOTD Notification
   handlers:
     - name: MOTD Notification
       debug:
