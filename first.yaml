@@ -1,13 +1,15 @@
 ---
 # Target
-- hosts: linux
+- hosts: centos01
   become: true
   gather_facts: false
+  vars
+    motd_vars: This is for Copy Module with content using vars
 # Tasks
   tasks:
    - name: configure MOTD
      copy:
-       content: This is for Copy Module with content
+       content: {{ motd_vars }}
        dest: /etc/motd
    
 
