@@ -4,8 +4,8 @@
   become: true
   gather_facts: true
   vars:
-    motd_centos: This is for handler testing for Centos
-    motd_ubuntu: This is for handler testing for Ubuntu
+    motd_centos: This is for handler testing  Centos
+    motd_ubuntu: This is for handler testing  Ubuntu
 # Tasks
   tasks:
    - name: configure MOTD for CentOs
