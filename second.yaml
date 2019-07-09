@@ -9,9 +9,10 @@
 # Tasks
   tasks:
    - name: create a file
-     file:
+     copy:
       src: test.txt
       dest: /tmp/test.txt
+      state: p
      register: sdfile
    - name: debugging
      debug:
