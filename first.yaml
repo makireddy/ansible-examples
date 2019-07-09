@@ -4,21 +4,30 @@
   become: true
   gather_facts: false
   vars:
-    motd_vars: This is for handler testing
+    motd_centos: This is for handler testing for centos
+    motd_ubuntu: This is for handler testing for ubuntu
 # Tasks
   tasks:
-   - name: configure MOTD
+   - name: configure MOTD for CentOs
      copy:
-       content: "{{ motd_vars }}"
+       content: "{{ motd_centos }}"
        dest: /etc/motd
-     notify: MOTD Notification
+     notify: MOTDCentos
+     when: ansible_distribution == "CentOs"
+   - name: configure MOTD for ubuntu
+     copy:
+       content: "{{ motd_ubuntu }}"
+       dest: /etc/motd
+     notify: MOTDUbuntu
+     when: ansible_distribution == "Ubuntu"
+
   handlers:
-    - name: MOTD Notification
+    - name: MOTDCentos
       debug:
-        msg: MSG received
-    - name: LinkNotify
+        msg: MSG received for CentOs
+    - name: MOTDUbuntu
       debug:
-        msg: LinkNotification received
+        msg: LinkNotification received for ubuntu
    
 
 # Handlers
