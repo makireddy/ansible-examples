@@ -14,8 +14,8 @@
       dest: /tmp/test.txt
      register: sdfile
    - name: debugging
-      debug:
-        msg: "{{sdfile}}"
+     debug:
+      msg: "{{sdfile}}"
 
    - name: named dictionary
      debug:
