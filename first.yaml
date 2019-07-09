@@ -2,7 +2,7 @@
 # Target
 - hosts: centos01
   become: true
-  gather_facts: false
+  gather_facts: true
   vars:
     motd_centos: This is for handler testing for centos
     motd_ubuntu: This is for handler testing for ubuntu
