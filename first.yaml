@@ -1,11 +1,11 @@
 ---
 # Target
-- hosts: centos01
+- hosts: linux
   become: true
   gather_facts: true
   vars:
-    motd_centos: This is for handler testing for centos
-    motd_ubuntu: This is for handler testing for ubuntu
+    motd_centos: This is for handler testing for Centos
+    motd_ubuntu: This is for handler testing for Ubuntu
 # Tasks
   tasks:
    - name: configure MOTD for CentOs
