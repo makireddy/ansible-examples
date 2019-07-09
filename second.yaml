@@ -1,0 +1,30 @@
+---
+# Target
+- hosts: centos01
+  become: true
+  gather_facts: false
+  vars:
+    dict:
+     dict_key01: value01 
+# Tasks
+  tasks:
+   - name: create a file
+     file:
+      src: test.txt
+      dest: /tmp/test.txt
+     register: sdfile
+   - name: debugging
+      debug:
+        msg: "{{sdfile}}"
+
+   - name: named dictionary
+     debug:
+      msg: "{{ dict }}"
+   - name: named dict with . notation
+     debug:
+      msg: "{{ dict.dict_key01 }}"
+   - name: named dictionary with bracket notation
+     debug:
+      msg: "{{ dict['dict_key01'] }}"
+
+...
