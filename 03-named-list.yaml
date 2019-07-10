@@ -1,0 +1,24 @@
+---
+#### Testiing named lists
+# Target
+- hosts: centos01
+  become: true
+  gather_facts: false
+  vars:
+    named_list:
+     - item01
+     - item02
+     - item03 
+# Tasks
+  tasks:
+   - name: Testing named named_list
+     debug:
+      msg: "{{ inline_dict }}"
+   - name: Testing named_list with dot notation 
+     debug:
+      msg: "{{ named_list.0 }}"
+   - name: Testing named_list with  bracket notation 
+     debug:
+      msg: "{{ named_list[0] }}"
+  #here for indexes, should not use ''
+...
