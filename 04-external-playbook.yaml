@@ -1,0 +1,21 @@
+---
+#### Testiing named lists
+# Target
+- hosts: centos01
+  become: true
+  gather_facts: false
+  vars:
+    - ext_vars_file.yaml
+# Tasks
+  tasks:
+   - name: Testing external dictionary key value
+     debug:
+      msg: "{{ ext_key }}"
+   - name: Testing named dictionary
+     debug:
+      msg: "{{ ext_dict }}"
+   - name: Testing external named dictionary key value with dot notation 
+     debug:
+      msg: "{{ ext_dict.ext_key }}"
+  
+...
