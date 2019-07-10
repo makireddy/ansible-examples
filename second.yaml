@@ -16,13 +16,12 @@
    - name: debugging
      debug:
       msg: "{{sdfile}}"
-
    - name: named dictionary
      debug:
       msg: "{{ dict }}"
    - name: named dict with . notation
      debug:
-      msg: "{{ dict.dict_key01 }}"
+      msg: "{{ sdfile.checksum }}"
    - name: named dictionary with bracket notation
      debug:
       msg: "{{ dict['dict_key01'] }}"
