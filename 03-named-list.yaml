@@ -13,7 +13,7 @@
   tasks:
    - name: Testing named named_list
      debug:
-      msg: "{{ inline_dict }}"
+      msg: "{{ named_list }}"
    - name: Testing named_list with dot notation 
      debug:
       msg: "{{ named_list.0 }}"
