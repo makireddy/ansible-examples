@@ -4,7 +4,7 @@
 - hosts: centos01
   become: true
   gather_facts: false
-  vars:
+  vars_files:
     - ext_vars_file.yaml
 # Tasks
   tasks:
