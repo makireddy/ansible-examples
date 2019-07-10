@@ -1,0 +1,19 @@
+---
+# Target
+- hosts: centos01
+  become: true
+  gather_facts: false
+  vars:
+    inline_dict:
+     {inline_dict_key01: Dictionary value01} 
+# Tasks
+  tasks:
+   - name: Testing inline Dictionary
+     debug:
+      msg: "{{ inline_dict }}"
+   - name: Testing dictionary with dot notation 
+     debug:
+      msg: "{{ inline_dict.inline_dict_key01 }}"
+...- name: Testing dictionary with  bracket notation 
+     debug:
+      msg: "{{ inline_dict['inline_dict_key01'] }}"
