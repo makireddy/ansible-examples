@@ -14,6 +14,6 @@
    - name: Testing dictionary with dot notation 
      debug:
       msg: "{{ inline_dict.inline_dict_key01 }}"
-...- name: Testing dictionary with  bracket notation 
+   - name: Testing dictionary with  bracket notation 
      debug:
       msg: "{{ inline_dict['inline_dict_key01'] }}"
