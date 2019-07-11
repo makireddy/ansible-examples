@@ -16,6 +16,6 @@
       msg: "{{ ext_dict }}"
    - name: Testing external named dictionary key value with dot notation 
      debug:
-      msg: "{{ ext_dict.ext_key }}"
+      msg: "{{ ext_dict.ext_dict_key }}"
   
 ...
