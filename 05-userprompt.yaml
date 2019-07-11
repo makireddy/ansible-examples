@@ -5,7 +5,7 @@
   gather_facts: false
   vars_prompt:
     - name: username
-    - private: false
+      private: false
 
   tasks:
     - name: Testiing vars_prompt
