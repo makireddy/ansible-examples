@@ -1,0 +1,10 @@
+#### Testing Hostvars
+# Target
+- hosts: centos01
+  become: true
+  gather_facts: false
+
+  tasks:
+    - name: Testiing Hostvars
+      debug:
+        msg: "{{ Hostvars[ansible_hostname].ansible_port }}"
