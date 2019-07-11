@@ -1,0 +1,14 @@
+#### Testiing user prompt
+# Target
+- hosts: centos01
+  become: true
+  gather_facts: false
+  vars_prompt:
+    - name: username
+
+  tasks:
+    - name: Testiing vars_prompt
+      debug:
+        msg: "{{ username }}"
+  
+...
