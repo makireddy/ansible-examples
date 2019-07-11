@@ -7,4 +7,4 @@
   tasks:
     - name: Testiing Hostvars
       debug:
-        msg: "{{ Hostvars[ansible_hostname].ansible_port }}"
+        msg: "{{ hostvars[ansible_hostname].ansible_port }}"
