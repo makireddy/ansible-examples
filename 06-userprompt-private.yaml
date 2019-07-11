@@ -1,0 +1,15 @@
+#### Testiing user prompt with private for sensitive info
+# Target
+- hosts: centos01
+  become: true
+  gather_facts: false
+  vars_prompt:
+    - name: password
+      private: true
+
+  tasks:
+    - name: Testiing vars_prompt
+      debug:
+        msg: "{{ password }}"
+  
+...
