@@ -1,0 +1,14 @@
+#### Testing Hostvars
+# Target
+- hosts: centos01
+  become: true
+  gather_facts: true
+
+  tasks:
+    - name: Testiing Hostvars with defalut empty string
+      debug:
+        msg: "{{ hostvars[ansible_nodename].ansible_port | default('')}}"
+
+    - name: Testiing group vars 
+      debug:
+        msg: "{{ ansible_user }}"
