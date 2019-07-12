@@ -11,4 +11,4 @@
 
     - name: Testiing group vars 
       debug:
-        msg: "{{ ansible_user }}"
+        msg: "{{ user_name }}"
