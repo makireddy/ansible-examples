@@ -7,7 +7,7 @@
   tasks:
     - name: Testiing Hostvars with defalut empty string
       debug:
-        msg: "{{ hostvars[ansible_nodename].ansible_port | default('')}}"
+        msg: "{{ hostvars[ansible_nodename].ansible_port | default('22')}}"
 
     - name: Testiing group vars 
       debug:
