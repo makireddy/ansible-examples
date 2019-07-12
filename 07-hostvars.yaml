@@ -7,7 +7,8 @@
   tasks:
     - name: Testiing Hostvars without defalut
       debug:
-        msg: "{{ hostvars[ansible_nodename].ansible_port }}"
+        msg: "{{ hostvars[ansible_nodename].ansible_port | defalut('')}}"
+
     - name: Testiing Hostvars with defalut
       debug:
-        msg: "{{ hostvars[ansible_nodename].ansible_port | defalut('')}}"
+        msg: "{{ hostvars[ansible_nodename].ansible_port | defalut('22')}}"
