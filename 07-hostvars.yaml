@@ -5,6 +5,9 @@
   gather_facts: true
 
   tasks:
-    - name: Testiing Hostvars
+    - name: Testiing Hostvars without defalut
       debug:
-        msg: "{{ hostvars[ansible_nodename]['ansible_port'] }}"
+        msg: "{{ hostvars[ansible_nodename].ansible_port }}"
+    - name: Testiing Hostvars with defalut
+      debug:
+        msg: "{{ hostvars[ansible_nodename].ansible_port | defalut('')}}"
