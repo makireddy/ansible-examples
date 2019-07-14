@@ -1,0 +1,8 @@
+- hosts: control
+  become: true
+  gather_facts: true
+
+  tasks:
+    - name: Gathering facts ip address
+      debug:
+        msg: "{{ ansible_default_ipv4.address }}"
