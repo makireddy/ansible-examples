@@ -1,0 +1,10 @@
+- hosts: control
+  gather_facts: true
+
+  tasks:
+    - name: Get IP address
+      debug:
+        msg: "{{ ansible_default_ipv4.address }}"
+    - name: Custom fact 02
+      debug:
+        msg: "{{ ansible_local.getDate01.Date }}"
