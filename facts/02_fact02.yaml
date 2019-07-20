@@ -5,6 +5,9 @@
     - name: Get IP address
       debug:
         msg: "{{ ansible_default_ipv4.address }}"
+    - name: Refresh
+      setup:
+        fact_path: /home/makir/sdwork/sdansible/facts.d
     - name: Custom fact 02
       debug:
         msg: "{{ ansible_local.getDate01.Date }}"
