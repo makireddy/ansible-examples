@@ -1,6 +1,6 @@
 #### Testing Hostvars
 # Target
-- hosts: control
+- hosts: centos01
   become: true
   gather_facts: true
 
