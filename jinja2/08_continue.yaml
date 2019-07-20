@@ -1,0 +1,17 @@
+# for loop with range and continue parameter
+- hosts: all
+  become: true
+  gather_facts: true
+
+  tasks:
+    - name: jinja2 example for for loop with range and continue
+      debug:
+        msg: >
+             The values in the array are,
+             {# This is the comment line-#}
+             {% for item in range(10,0, -1) -%}
+             {% if item is odd -%}
+                {% continue %}
+             {% endif %}
+             {{item}}
+             {% endfor %}
