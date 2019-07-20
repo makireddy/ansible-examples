@@ -1,0 +1,15 @@
+- hosts: all
+  become: true
+  gather_facts: true
+
+  tasks:
+    - name: jinja2 example for if else statement
+      debug:
+        msg: >
+             ----== If the hostname is control print a message==---
+             {# This is the comment line-#}
+             {% if ansible_hostname == "ansible-controlhost1" -%}
+                  This is the control host
+             {% else -%}
+                  This belongs to {{ ansible_os_family }} family
+             {% endif %}
