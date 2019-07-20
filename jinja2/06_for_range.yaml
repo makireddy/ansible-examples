@@ -1,0 +1,14 @@
+# for loop with range parameter
+- hosts: all
+  become: true
+  gather_facts: true
+
+  tasks:
+    - name: jinja2 example for for loop with range
+      debug:
+        msg: >
+             -----=== for loop ==----
+             {# This is the comment line-#}
+             {% for item in range(1,11) -%}
+             The values in the array are {{item}}
+             {% endfor %}
