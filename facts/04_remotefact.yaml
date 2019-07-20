@@ -1,0 +1,26 @@
+- hosts: centos01
+  gather_facts: true
+
+  tasks:
+    - name: Get IP address
+      debug:
+        msg: "{{ ansible_default_ipv4.address }}"
+    - copy:
+      debug:
+        src: /home/makir/sdwork/sdansible/facts.d
+        dest: /home/makir/sdwork/sdansible/facts.d
+    - name: Refresh
+      setup:
+        fact_path: /home/makir/sdwork/sdansible/facts.d
+    - name: Custom fact 01
+      debug:
+        msg: "{{ ansible_local.getDate01.Date }}"
+    - name: Custom fact 02
+      debug:
+        msg: "{{ ansible_local.getDate02.Date.date }}"
+    - name: Custom fact 01 based on host vars
+      debug:
+        msg: "{{ hostvars[ansible_hostname].ansible_local.getDate01.Date }}"
+    - name: Custom fact 02 based on host vars
+      debug:
+        msg: "{{ hostvars[ansible_hostname].ansible_local.getDate02.Date.date }}"
