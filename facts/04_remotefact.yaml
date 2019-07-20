@@ -7,8 +7,8 @@
         msg: "{{ ansible_default_ipv4.address }}"
     - name: copy facts folder to remote 
       copy:
-        src: /home/makir/sdwork/sdansible/facts.d/*
-        dest: /home/makir/sdwork/sdansible/facts.d
+        src: /home/makir/sdwork/sdansible/facts.d
+        dest: /home/makir/sdwork/sdansible
         mode: 0755
     - name: Refresh
       setup:
