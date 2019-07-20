@@ -9,6 +9,6 @@
         msg: >
              The values in the array are,
              {# This is the comment line-#}
-             {% for item in range(1,11) -%}
+             {% for item in range(1,11) %}
              {{item}}
              {% endfor %}
