@@ -15,4 +15,4 @@
                   This belongs to Redhat family
              {% else -%}
                    This is belongs to {{ ansible_os_family }} family
-             {% endif% }
+             {% endif % }
