@@ -8,7 +8,7 @@
     - name: copy facts folder to remote 
       copy:
         src: /home/makir/sdwork/sdansible/facts.d
-        dest: /home/makir/sdwork/sdansible/facts.d
+        dest: /home/makir/sdwork/sdansible
     - name: Refresh
       setup:
         fact_path: /home/makir/sdwork/sdansible/facts.d
