@@ -11,6 +11,6 @@
              {# This is the comment line-#}
              {% if ansible_hostname == "ansible-controlhost1" -%}
                   This is the control host
-             {% elseif ansible_hostname == centos01 -%}
+             {% elif ansible_hostname == centos01 -%}
                   This belongs to Redhat family
              {% endif %}
