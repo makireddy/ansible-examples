@@ -1,6 +1,6 @@
 #### Testing Hostvars
 # Target
-- hosts: control
+- hosts: controlhost
   become: true
   gather_facts: true
 
