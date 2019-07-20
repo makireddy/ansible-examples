@@ -7,8 +7,8 @@
     - name: jinja2 example for for loop with range
       debug:
         msg: >
-             -----=== for loop ==----
+             The values in the array are,
              {# This is the comment line-#}
              {% for item in range(1,11) -%}
-             The values in the array are {{item}}
+             {{item}}
              {% endfor %}
