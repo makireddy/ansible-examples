@@ -8,7 +8,7 @@
         msg: >
              ----== If the hostname is control print a message==---
              {# This is the comment line-#}
-             {% if ansible_hostname == "ansible-controlhost1" %}
+             {% if ansible_hostname == "ansible-controlhost1" -%}
                   This is the control host
              {% else -%}
                   This belongs to {{ ansible_os_family }} family
