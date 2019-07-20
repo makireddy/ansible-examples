@@ -1,0 +1,15 @@
+- hosts: all
+  become: true
+  gather_facts: true
+
+  tasks:
+    - name: jinja2 example for set variable
+      debug:
+        msg: >
+             {# This is the comment line-#}
+             {% set sd_var = 'Appa' %}
+             {% if sd_var is defined -%}
+                  sd_var is defined
+             {% else -%}
+                  sd_var is not defined
+             {% endif %}
