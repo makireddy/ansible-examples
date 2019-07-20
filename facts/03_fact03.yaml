@@ -1,4 +1,4 @@
-- hosts: control
+- hosts: controlhost
   gather_facts: true
 
   tasks:
@@ -16,7 +16,7 @@
         msg: "{{ ansible_local.getDate02.Date.date }}"
     - name: Custom fact 01 based on host vars
       debug:
-        msg: "{{ host_vars[ansible_hostname].ansible_local.getDate01.Date }}"
+        msg: "{{ hostvars[ansible_hostname].ansible_local.getDate01.Date }}"
     - name: Custom fact 02 based on host vars
       debug:
-        msg: "{{ host_vars[ansible_hostname].ansible_local.getDate02.Date.date }}"
+        msg: "{{ hostvars[ansible_hostname].ansible_local.getDate02.Date.date }}"
