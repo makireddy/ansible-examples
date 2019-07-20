@@ -1,0 +1,14 @@
+- hosts: all
+  become: true
+  gather_facts: true
+
+  tasks:
+    - name: jinja2 example for for loop
+      debug:
+        msg: >
+             -----=== for loop ==----
+             {# This is the comment line-#}
+             {% for item in ansible_all_ipv4_addresses -%}
+             ipv4 address_{{loop.index}} = {{item}}
+             {% endfor %}
+             
