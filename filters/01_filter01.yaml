@@ -22,8 +22,11 @@
           mode: "0600"
     - debug:
         msg: "{{ [1,2,3,4,5] | min }}"
+      debug:
         msg: "{{ [1,2,3,4,5] | max }}"
+      debug:
         msg: "{{ [1,2,3,4,5,1,2,6] | unique }}"
+      debug:
         msg: "{{ [1,2,3,4,5,1,2,6] | unique | to_yaml }}"
 ...
 
