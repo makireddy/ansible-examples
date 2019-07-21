@@ -19,6 +19,6 @@
       loop:
         - path: /tmp/demofilter
         - path: /tmp/test
-        - mode: "0600"
+          mode: "0600"
 ...
 
