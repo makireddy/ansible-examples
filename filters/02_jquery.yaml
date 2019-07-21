@@ -1,0 +1,41 @@
+---
+- hosts: control
+  vars:
+    sddata:
+      cdata:
+        cluster:
+          - name: "c01"
+          - name: "c02"
+        servers:
+          - name: "s01"
+            cluster: "c02"
+            port: "8080"
+          - name: "s02"
+            cluster: "c01"
+            port: "8081"
+          - name: "s03"
+            cluster: "c01"
+            port: "8082"
+        apps:
+          - name: "jenkins"
+            target: "c02"
+          - name: "aem"
+          - target: "c01"
+  tasks:
+    - name: get cluster data
+      debug:
+        msg: "{{ sddata | json_query('cdata.cluster[*].name') }}"
+    - name: get servers data
+      debug:
+        msg: "{{ sddata | json_query('cdata.servers[*].name') }}"
+    - name: using vars to retrieve data 
+      debug:
+        var: item
+      loop: "{{ sddata | json_query(my_query__var) }}"
+      vars:
+        my_query__var: "cdata.servers[?cluster=='c02'].port"
+
+
+...
+
+ 
