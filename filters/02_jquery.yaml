@@ -34,8 +34,6 @@
       loop: "{{ sddata | json_query(my_query__var) }}"
       vars:
         my_query__var: "cdata.servers[?cluster=='c02'].port"
-
-
 ...
 
  
