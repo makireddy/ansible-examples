@@ -20,7 +20,7 @@
         - path: /tmp/demofilter
         - path: /tmp/test
           mode: "0600"
-      debug:
+    - debug:
         msg: "{{ [1,2,3,4,5] | min }}"
         msg: "{{ [1,2,3,4,5] | max }}"
         msg: "{{ [1,2,3,4,5,1,2,6] | unique }}"
