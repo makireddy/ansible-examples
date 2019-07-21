@@ -1,3 +1,4 @@
+---
 - hosts: control
   become: true
   gather_facts: true
@@ -11,3 +12,13 @@
       debug:
         msg: "{{ lookup('env', 'makireddy') | default('chicago', true) }}"
 #if the env variable is not defined, it prints nothing but doesn't throw error
+    - file:
+        dest: "{{ item.path }}"
+        state: touch
+        mode: "{{ item.mode | default(omit) }}"
+      loop:
+        - path: /tmp/demofilter
+        - path: /tmp/test
+        - mode: "0600"
+...
+
