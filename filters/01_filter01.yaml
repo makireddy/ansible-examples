@@ -9,4 +9,4 @@
       debug:
         msg: "{{ appa | default(30) }}"
       debug:
-        msg: {{ lookup('env', 'makireddy') }}
+        msg: "{{ lookup('env', 'makireddy') }}"
