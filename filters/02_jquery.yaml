@@ -36,6 +36,9 @@
         my_query__var: "cdata.servers[?cluster=='c02'].port"
     - name: url filtering 
       debug:
+        msg: "{{ 'http://admin@passworditlynk.com/ansible/installansible.html' | urlsplit('hostname') }}"
+    - name: url filtering 
+      debug:
         msg: "{{ 'http://admin@passworditlynk.com/ansible/installansible.html' | urlsplit('username') }}"
     - name: url filtering  path
       debug:
