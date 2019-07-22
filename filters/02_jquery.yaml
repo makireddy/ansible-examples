@@ -34,6 +34,9 @@
       loop: "{{ sddata | json_query(my_query__var) }}"
       vars:
         my_query__var: "cdata.servers[?cluster=='c02'].port"
+    - name: url filtering query
+      debug:
+        msg: "{{ 'http://admin:password@itlynk.com/ansible/installansible.html?target=devops#ansible' | urlsplit }}"
     - name: url filtering 
       debug:
         msg: "{{ 'http://admin:password@itlynk.com/ansible/installansible.html' | urlsplit('hostname') }}"
