@@ -36,16 +36,16 @@
         my_query__var: "cdata.servers[?cluster=='c02'].port"
     - name: url filtering 
       debug:
-        msg: "{{ 'http://admin@passworditlynk.com/ansible/installansible.html' | urlsplit('hostname') }}"
+        msg: "{{ 'http://admin:password@itlynk.com/ansible/installansible.html' | urlsplit('hostname') }}"
     - name: url filtering 
       debug:
-        msg: "{{ 'http://admin@passworditlynk.com/ansible/installansible.html' | urlsplit('username') }}"
+        msg: "{{ 'http://admin:password@itlynk.com/ansible/installansible.html' | urlsplit('username') }}"
     - name: url filtering  path
       debug:
-        msg: "{{ 'http://admin@passworditlynk.com/ansible/installansible.html' | urlsplit('path') }}"
+        msg: "{{ 'http://admin:password@itlynk.com/ansible/installansible.html' | urlsplit('path') }}"
     - name: url filtering query
       debug:
-        msg: "{{ 'http://admin@passworditlynk.com/ansible/installansible.html?target=devops#ansible' | urlsplit('query') }}"
+        msg: "{{ 'http://admin:password@itlynk.com/ansible/installansible.html?target=devops#ansible' | urlsplit('query') }}"
 
 
 ...
