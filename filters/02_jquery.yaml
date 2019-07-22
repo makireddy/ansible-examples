@@ -37,6 +37,14 @@
     - name: url filtering 
       debug:
         msg: "{{ 'http://admin@passworditlynk.com/ansible/installansible.html' | urlsplit('username') }}"
+    - name: url filtering  path
+      debug:
+        msg: "{{ 'http://admin@passworditlynk.com/ansible/installansible.html' | urlsplit('username') }}"
+    - name: url filtering query
+      debug:
+        msg: "{{ 'http://admin@passworditlynk.com/ansible/installansible.html?target=devops#ansible' | urlsplit('query') }}"
+
+
 ...
 
  
