@@ -3,7 +3,7 @@
   tasks:
   - name: set FACT
     set_fact:
-     	  sd_fact: This is my first FACT
+     	sd_fact: This is my first FACT
   - name: display FACT
       debug:
         msg: "{{ sd_fact }}"
