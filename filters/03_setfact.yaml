@@ -7,5 +7,4 @@
   - name: display FACT
       debug:
         msg: "{{ sd_fact }}"
-
 ...
