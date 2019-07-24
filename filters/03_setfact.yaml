@@ -1,5 +1,5 @@
 --- 
-- hosts: linux:!ubuntu01!
+- hosts: linux:!ubuntu01
   tasks: 
     - name: "set FACT"
       set_fact: 
