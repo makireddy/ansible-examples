@@ -1,24 +1,13 @@
 --- 
-- hosts: linux
+- hosts: centos01, ubuntu01
   tasks: 
-    - name: "set FACT"
-      set_fact: 
-        sd_web_path: /usr/share/www
-        sd_user: www-user
-      when: ansible_distribution == "CentOS"
-    - name: "set FACT"
-      set_fact: 
-        sd_web_path: /var/www/html
-        sd_user: var-user
-      when: ansible_distribution == "Ubuntu"
-    - name: block starts here
-      block:  
-      - name: "disply FACT"
-        debug: 
-          msg: "{{ sd_web_pathee }}"
-      rescue:
-      - name: "sd user disply"
-        debug: 
-          msg: "{{ sd_user }}"
+    - name: "Register Output"
+      command: hostname -s 
+      register: hostname_output
+    - name: Display the registered Output
+      debug:
+        msg: "{{ hostname_output }}"
+
+    
    
 ...
