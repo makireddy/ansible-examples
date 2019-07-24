@@ -5,12 +5,12 @@
       set_fact: 
         sd_web_path: /usr/share/www
       when: ansible_distribution == "CentOS"
-    - debug: 
-        msg: "{{ sd_web_path }}"
     - name: "set FACT"
       set_fact: 
         sd_web_path: /var/www/html
       when: ansible_distribution == "Ubuntu"
+    - name: "disply FACT"
     - debug: 
         msg: "{{ sd_web_path }}"
+   
 ...
