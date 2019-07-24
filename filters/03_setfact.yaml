@@ -10,7 +10,7 @@
         sd_web_path: /var/www/html
       when: ansible_distribution == "Ubuntu"
     - name: "disply FACT"
-    - debug: 
+      debug: 
         msg: "{{ sd_web_path }}"
    
 ...
