@@ -9,6 +9,7 @@
     - name: "set FACT"
       set_fact: 
         sd_web_path: /var/www/html
+        sd_user: www-user
       when: ansible_distribution == "Ubuntu"
     - name: block starts here
       block:  
