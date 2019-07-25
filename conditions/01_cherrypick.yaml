@@ -6,7 +6,7 @@
       register: hostname_output
     - name: Display the registered Output
       debug:
-        var: hostname_output.sdout
+        var: hostname_output.stdout
 
     
    
