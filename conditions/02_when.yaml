@@ -1,0 +1,7 @@
+--- 
+- hosts: centos01, ubuntu01
+  tasks: 
+    - name: "Register Output"
+      command: hostname -s 
+      when: ansible_distribuition == "CentOS" and ansible_distribuition_major_version == "7"
+...
