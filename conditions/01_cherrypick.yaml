@@ -1,12 +1,12 @@
 --- 
-- hosts: centos01, ubuntu01
+- hosts: centos01
   tasks: 
     - name: "Register Output"
       command: hostname -s 
       register: hostname_output
     - name: Display the registered Output
       debug:
-        msg: "{{ hostname_output }}"
+        var: hostname_output.sdout
 
     
    
