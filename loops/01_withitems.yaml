@@ -2,7 +2,7 @@
 
 # Tasks
   tasks:
-   - name: configure MOTD for CentOs
+   - name: testing loops
      copy:
        content: "welcome to {{ item }} Linux" 
        dest: /etc/motd
