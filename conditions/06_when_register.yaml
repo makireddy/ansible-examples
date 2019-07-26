@@ -9,6 +9,5 @@
       register: host_output
     - name: display Output
       debug:
-      	var: host_output
-
+        var: host_output
 ...
