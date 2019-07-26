@@ -3,5 +3,6 @@
   tasks: 
     - name: "Register Output"
       command: hostname -s
-      when: (ansible_distribution == "CentOS" and ansible_distribution_major_version == "7") or (ansible_distribution == "Ubuntu" and ansible_distribution_major_version == "18")
+      when: (ansible_distribution == "CentOS" and ansible_distribution_major_version == "7") or 
+            (ansible_distribution == "Ubuntu" and ansible_distribution_major_version == "18")
 ...
