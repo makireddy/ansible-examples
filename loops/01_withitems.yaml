@@ -4,7 +4,7 @@
   tasks:
    - name: configure MOTD for CentOs
      copy:
-       content: "welcome to {{ item }}" Linux" 
+       content: "welcome to "{{ item }}" Linux" 
        dest: /etc/motd
      with_itmes: ['CentOS', 'Ubuntu']
      when: ansible_distribution == item 
