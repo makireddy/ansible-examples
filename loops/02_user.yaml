@@ -6,6 +6,6 @@
      user:
        name: "{{ item }}" 
      with_items:
-     	- testuser1
+      - testuser1
      	- testuser2
 ...
