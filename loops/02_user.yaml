@@ -7,5 +7,5 @@
        name: "{{ item }}" 
      with_items:
       - testuser1
-     	- testuser2
+      - testuser2
 ...
