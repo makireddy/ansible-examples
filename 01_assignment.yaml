@@ -1,0 +1,22 @@
+---
+- hosts: centos01, ubuntu01
+# Tasks
+  tasks:
+   - name: creating users on remote machines
+     name_list:
+     	- skydevops
+     	- yebbare
+     {% if ansible_distribution == "centOS" -%}
+     user:
+       name: "{{ item }}"
+     with_items:
+     	- "{{ name_list.0 }}"
+     	- "{{ name_list.1 }}"
+      {% elif ansible_distribution == "Ubunut" -%}
+      user:
+       name: "{{ item }}"
+      with_items:
+      - "{{ name_list.0 }}"
+      {% endif %}
+
+...
