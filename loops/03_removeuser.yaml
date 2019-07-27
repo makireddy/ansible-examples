@@ -1,0 +1,12 @@
+---
+- hosts: centos01, ubuntu01
+# Tasks
+  tasks:
+   - name: testing with items and user module
+     user:
+       name: "{{ item }}" 
+       state: absent
+     with_items:
+      - testuser1
+      - testuser2
+...
