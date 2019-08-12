@@ -27,8 +27,6 @@
     - name: Testing external dictionary key value
       debug:
         msg: "{{ item.0.sdwebsite_name}}"
-    - debug:
-        msg: "{{ item.1.path}}"
       with_subelements:
         - "{{ sdwebsites }}"
         - SDAppPool
