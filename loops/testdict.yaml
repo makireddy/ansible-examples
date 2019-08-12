@@ -1,0 +1,27 @@
+- hosts: centos01, ubuntu01
+  vars:
+    websites:
+      - sdwebsite_name: Default Web Site
+        SDAppPool:
+          - name: SDHB-Customer
+            path: D:\Skydevops\SDAPP\API\Cust
+            application: API\Cust
+          - name: Auth
+            path: D:\Skydevops\SDAPP\Auth
+            application: Auth
+          - name: SDHB-CCAP
+            path: D:\Skydevops\SDAPP\CCAP
+            application: CCAP
+          - name: BBAD-CMSD
+            path: D:\Skydevops\SDAPP\CCAP
+            application: SDHB-CCAP 
+          - name: BBAD-CMSD
+            path: D:\Skydevops\SDAPP\CM
+            application: CM
+  tasks:
+    - name: Testing external dictionary key value
+      debug:
+        msg: "{{ item.0.sdwebsite_name}}"
+      with_subelements:
+        - websites
+        - SDAppPool
