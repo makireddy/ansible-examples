@@ -22,5 +22,5 @@
     - name: Testing external dictionary key value
       debug:
         msg: "{{ item.0.sdwebsite_name }}"
-      with_items:
+      with_subelements:
         - "{{ sdwebsites }}"
