@@ -24,4 +24,4 @@
         msg: "{{ item.0.sdwebsite_name}}"
       with_subelements:
         - "{{ sdwebsites }}"
-        - "{{ SDAppPool }}"
+        - SDAppPool
