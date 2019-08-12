@@ -1,6 +1,6 @@
 - hosts: centos01, ubuntu01
   vars:
-    websites:
+    sdwebsites:
       - sdwebsite_name: Default Web Site
         SDAppPool:
           - name: SDHB-Customer
