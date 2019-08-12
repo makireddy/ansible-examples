@@ -18,6 +18,11 @@
           - name: BBAD-CMSD
             path: D:\Skydevops\SDAPP\CM
             application: CM
+      - sdwebsite_name: Web-2
+        SDAppPool:
+          - name: SDHB-Customer
+            path: D:\Skydevops\Web-2
+            application: Web-2
   tasks:
     - name: Testing external dictionary key value
       debug:
